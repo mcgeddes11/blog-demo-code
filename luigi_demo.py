@@ -27,4 +27,4 @@ class MyDependentTask(luigi.Task):
 tasks = []
 tasks.append(MyFirstTask())
 tasks.append(MyDependentTask(5))
-luigi.build(tasks, local_scheduler=False, workers=1)
+luigi.build(tasks, local_scheduler=True, workers=1)
